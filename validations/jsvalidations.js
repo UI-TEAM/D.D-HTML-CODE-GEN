@@ -5,13 +5,21 @@ function Validations(){
 }
 
 /**
-*function requiredField decides filed need to be filled
-*param elementId string
-*param elementClass string
-*param element Object
+*function isObject decides filed need to be filled
+*param object Object
 *returns true or false
 **/
-Validations.prototype.isObject = function(elementId, elementClass ,element){
+Validations.prototype.isObject = function(object){
 
 	return true;
+}
+
+/**
+*function objectOf decides recieved object belongs to recieved class prototype
+*param object Object
+*param object prototype
+*returns true or false
+**/
+Validations.prototype.objectOf = function(object, Class){
+
 }
