@@ -6,10 +6,10 @@ function Validations(){
 
 /**
 *function requiredField decides filed need to be filled
-*param elementId string
-*param elementClass string
-*param element Object
-*return true or false
+*@param elementId string
+*@param elementClass string
+*@param element Object
+*@returns true or false
 **/
 Validations.prototype.requiredField = function(elementId, elementClass ,element){
 
