@@ -106,13 +106,3 @@ class Val(object):
 
             
 
-
-v=Val()
-v.is_num(12)
-v.is_string('er')
-v.is_list([132,452,435])
-v.is_tuple((1234,452,356))
-v.datetime('24 March 2016')
-v.funtest()
-v.is_all([])
-v.ctest()
