@@ -3,6 +3,7 @@ import types
 import collections
 from dateutil.parser import parse 
 class Val(object):
+
     def is_num(self,numbers):
         if type(numbers) == int:
             print("its a number of  integer",numbers,type(numbers))
@@ -15,7 +16,7 @@ class Val(object):
             return True
         else:
             return False
-#is_num()
+
     def is_string(self,strings):
         try:
             if type(strings) == str:
