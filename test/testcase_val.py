@@ -1,6 +1,9 @@
 import unittest
+import sys
+sys.path.append(r'/home/mobigesture/Desktop/ramyasree/D.D-HTML-CODE-GEN1/python')
+from validate import Val
 import traceback
-from val import Val
+#from validate import Val
 class simpletest_case(unittest.TestCase):
     def setUp(self):
         #setting up for the test
