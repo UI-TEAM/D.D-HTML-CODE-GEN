@@ -5,17 +5,21 @@ from dateutil.parser import parse
 class Val(object):
 
     def is_num(self,numbers):
-        if type(numbers) == int:
-            print("its a number of  integer",numbers,type(numbers))
-            return True
-        elif type(numbers) == float:
-            print("its float",numbers)
-            return True
-        elif type(numbers) == complex :
-            print("its complex",numbers)
-            return True
-        else:
-            return False
+        try:
+            if type(numbers) == int:
+                print("its a number of  integer",numbers,type(numbers))
+                return True
+            elif type(numbers) == float:
+                print("its float",numbers)
+                return True
+            elif type(numbers) == complex :
+                print("its complex",numbers)
+                return True
+            else:
+                print("not a num")
+                return False
+        except:
+            raise
 
     def is_string(self,strings):
         try:
@@ -101,6 +105,4 @@ class Val(object):
                 return False
         except NameError:
             print("please give valid class name")
-
-            
 
