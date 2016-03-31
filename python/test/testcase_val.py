@@ -15,7 +15,6 @@ class simpletest_case(unittest.TestCase):
 
 }
 
-
     def setUp(self):
         test_method= self.id()
         test_method= test_method.split('.')[-1]
@@ -29,13 +28,15 @@ class simpletest_case(unittest.TestCase):
     def test_is_num(self):
 
         try:
-            method=Val.is_num('self',numbers=12)
-            self.assertTrue(True,self.error_message)
-            #self.assertTrue(True,Val.is_num('num check',12))
+            method=Val.is_num('self',numbers=1)
+            self.assertTrue(method)
+
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,self.failureException)
+            #self.assertFalse(False,"exception raise")
             traceback.print_exc()
-            raise
+            #self.assertTrue()
+            raise self.failureException
     def test_is_string(self):
         try:
             self.assertTrue(True,Val.is_string('string check','adfsk'))
@@ -52,38 +53,38 @@ class simpletest_case(unittest.TestCase):
 
     def test_is_tuple(self):
         try:
-            self.assertTrue(True,Val.is_tuple('to check tuple',(12,34,21)))
+            self.assertTrue(Val.is_tuple('to check tuple',(12,34,21)),self.error_message)
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,"sree")
             traceback.print_exc()
 
     def test_is_all(self):
         try:
 
-            self.assertTrue(True,Val.is_all('all at once ',{12:1,23:3}))
+            self.assertTrue(Val.is_all('all at once ',{12:1,23:3}))
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,"exception raise")
             traceback.print_exc()
 
     def test_datetime(self):
         try:
-            self.assertTrue(True,Val.datetime('date check',"26 jan 1950"))
+            self.assertTrue(Val.datetime('date check',"26 jan 1950"))
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,"exception raise")
             traceback.print_exc()
 
     def _test_funtest(self):
         try:
-            self.assertTrue(True,Val.funtest('setUp'))
+            self.assertTrue(Val.funtest('setUp'))
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,"exception raise")
             traceback.print_exc()
 
     def test_ctest(self):
         try:
-            self.assertTrue(True,Val.ctest(simpletest_case))
+            self.assertTrue(Val.ctest(simpletest_case))
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,"exception raise")
             traceback.print_exc()
 
 if __name__ == '__main__':
