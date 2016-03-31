@@ -28,63 +28,77 @@ class simpletest_case(unittest.TestCase):
     def test_is_num(self):
 
         try:
-            method=Val.is_num('self',numbers=1)
-            self.assertTrue(method)
+            numbers=[1,2,3]
+            for i in numbers:
+                method=Val.is_num('self',numbers=i)
+                self.assertTrue(method)
 
         except:
-            self.assertFalse(True,self.failureException)
-            #self.assertFalse(False,"exception raise")
+            self.assertFalse(True,self.error_message)
             traceback.print_exc()
-            #self.assertTrue()
-            raise self.failureException
+
     def test_is_string(self):
         try:
-            self.assertTrue(True,Val.is_string('string check','adfsk'))
+            strings=['hi','how','are','you']
+
+            for i in strings:
+                method=Val.is_string('self',strings=i)
+                self.assertTrue(method)
 
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,self.error_message)
             traceback.print_exc()
+
     def test_is_list(self):
         try:
-            self.assertTrue(True,Val.is_list('list check',[12,32,34]))
+            listing=[[1,2,3],[1]]
+            for i in listing:
+                method=Val.is_list('list check',listing=i)
+                self.assertTrue(method)
         except:
-            self.assertFalse(False,"exception raise")
+            self.assertFalse(True,self.error_message)
             traceback.print_exc()
 
     def test_is_tuple(self):
         try:
-            self.assertTrue(Val.is_tuple('to check tuple',(12,34,21)),self.error_message)
+            tple=[(1,2,3)]
+            for i in tple:
+                method=Val.is_tuple('tuple check',tple=i)
+                self.assertTrue(method)
         except:
-            self.assertFalse(True,"sree")
+            self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
     def test_is_all(self):
         try:
-
-            self.assertTrue(Val.is_all('all at once ',{12:1,23:3}))
+            listin=[{1:'one',2:2},(1,2,3),[1,3,5]]
+            for i in listin:
+                method=Val.is_all('check all',listin=i)
+                self.assertTrue(method)
         except:
-            self.assertFalse(True,"exception raise")
+            self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
     def test_datetime(self):
         try:
             self.assertTrue(Val.datetime('date check',"26 jan 1950"))
         except:
-            self.assertFalse(True,"exception raise")
+            self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
     def _test_funtest(self):
         try:
-            self.assertTrue(Val.funtest('setUp'))
+            print('88',self)
+            self.assertTrue(Val.funtest())
         except:
-            self.assertFalse(True,"exception raise")
+            self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
     def test_ctest(self):
         try:
             self.assertTrue(Val.ctest(simpletest_case))
         except:
-            self.assertFalse(True,"exception raise")
+            self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
 if __name__ == '__main__':
