@@ -16,7 +16,7 @@ class Val(object):
                 print("its complex",numbers)
                 return True
             else:
-                print("not a num")
+                print(numbers,"not a num")
                 return False
         except:
             raise
@@ -25,12 +25,16 @@ class Val(object):
         try:
             if type(strings) == str:
                 if len(strings) > 0:
-                    print('its a string',strings,bool(str(strings)))
+                    print('its a string',strings,bool(str(strings)),type(strings))
                     return True
-                elif len(strings) == 0 or strings == "":
+                elif len(strings) == 0 or strings == " ":
                     print("empty")
                     return False
-        except ValueError:
+            else:
+                print("not a string")
+                return False
+
+        except:
             raise
     
     def is_list(self,listing):
@@ -70,6 +74,8 @@ class Val(object):
             else:
                 print("it's a dict",listin,bool(type(listin)))
                 return True
+        else:
+            return False
     def datetime(self,dtime):
         try:
             parse(dtime)
@@ -82,7 +88,7 @@ class Val(object):
     def funtest(self):
         try:
             from inspect import isfunction
-            print('*****',isfunction(self))
+            print('*****',isfunction(self),self)
             if isfunction(self) == False:
                 print('its a function',type(self),self)
             else:
@@ -105,4 +111,3 @@ class Val(object):
                 return False
         except NameError:
             print("please give valid class name")
-
