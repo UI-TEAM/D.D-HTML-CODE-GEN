@@ -25,56 +25,77 @@ class simpletest_case(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_is_num(self):
+    def _test_is_num(self):
 
         try:
-            numbers=[1,2,3]
+            numbers=[1,2,3,'sree']
             for i in numbers:
-                method=Val.is_num('self',numbers=i)
-                self.assertTrue(method)
+                if i == len(numbers):
+                    method=Val.is_num('self',numbers=i)
+                    self.assertFalse(method)
+                else:
+                    method=Val.is_num(self,numbers=i)
+                    self.assertTrue(method)
+
 
         except:
             self.assertFalse(True,self.error_message)
             traceback.print_exc()
 
-    def test_is_string(self):
+    def _test_is_string(self):
         try:
-            strings=['hi','how','are','you']
-
+            strings=['hi','how','are','you',89]
             for i in strings:
-                method=Val.is_string('self',strings=i)
-                self.assertTrue(method)
+                if i == len(strings):
+                    method=Val.is_string('strng check',strings=i)
+                    self.assertFalse(method)
+                else:
+                    method= Val.is_string('strn check',strings=i)
+                    self.assertTrue(method)
 
         except:
             self.assertFalse(True,self.error_message)
             traceback.print_exc()
 
-    def test_is_list(self):
+    def _test_is_list(self):
         try:
-            listing=[[1,2,3],[1]]
+            listing=[[1,2,3],[1],(4)]
             for i in listing:
-                method=Val.is_list('list check',listing=i)
-                self.assertTrue(method)
+                if i == len(listing):
+                    method=Val.is_list('list check',listing=i)
+                    self.assertFalse(method)
+                else:
+                    method = Val.is_list('list check',listing=i)
+                    self.assertTrue(method)
         except:
             self.assertFalse(True,self.error_message)
             traceback.print_exc()
 
-    def test_is_tuple(self):
+    def _test_is_tuple(self):
         try:
-            tple=[(1,2,3)]
+            tple=[(1,2,3),{1:1}]
             for i in tple:
-                method=Val.is_tuple('tuple check',tple=i)
-                self.assertTrue(method)
+                if i == len(tple):
+                    method=Val.is_tuple('tuple check',tple=i)
+                    self.assertFalse(method)
+                else:
+                    method=Val.is_tuple('tuple check',tple=i)
+                    self.assertTrue(method)
         except:
             self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
-    def test_is_all(self):
+    def _test_is_all(self):
         try:
+
             listin=[{1:'one',2:2},(1,2,3),[1,3,5]]
             for i in listin:
-                method=Val.is_all('check all',listin=i)
-                self.assertTrue(method)
+                if i == len(listin):
+                    method=Val.is_all('check all',listin=i)
+                    self.assertFalse(method)
+                else:
+                    method=Val.is_all('check all',listin=i)
+                    self.assertTrue(method)
         except:
             self.assertFalse(True,"exception raised")
             traceback.print_exc()
@@ -94,7 +115,7 @@ class simpletest_case(unittest.TestCase):
             self.assertFalse(True,"exception raised")
             traceback.print_exc()
 
-    def test_ctest(self):
+    def _test_ctest(self):
         try:
             self.assertTrue(Val.ctest(simpletest_case))
         except:
