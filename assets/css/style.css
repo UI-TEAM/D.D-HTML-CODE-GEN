@@ -1,0 +1,43 @@
+#mainHeading {
+	display: inline-block;
+	margin-top: 0;
+}
+#searchForm {
+	margin-top: 0
+}
+.pallet {
+	height: 300px;
+	margin: 10px 5px;
+	border: solid 1px black;
+	/*border-radius: 5px;*/
+}
+.pallet-hedding {
+	font-weight: bold;
+	display: inline-block;
+}
+.pallet-icon {
+	margin-top: 4px;
+	float: right;
+}
+.pallet-container {
+	padding: 10px;
+	height: 98px;
+	overflow-y: scroll; 
+	/*box-sizing: border-box;*/
+}
+.pallet-header {
+	background-color: skyblue;
+	padding: 5px;
+	border-bottom: solid 1px black;
+}
+
+.sub-header {
+	border-top: solid 1px black;
+}
+#codeGen {
+	display:block;
+	margin: 10px auto;
+}
+.workplace-heading  {
+	text-align: center;
+}
