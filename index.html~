@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Drag and Drop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="assets/lib/bootstrap-3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+        <!-- welcome UI-TEAM -->
+        <div class="container-fluid">
+        	<div class="page-header">
+  				<h1 id="mainHeading">Drag N Drop <small>Experience Coding</small></h1>
+  				<nav class="navbar navbar-right">
+				    <div class="container-fluid">
+				    	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+				      		<form class="navbar-form navbar-left" role="search" id="searchForm">
+				        		<div class="form-group">
+				          			<input type="text" class="form-control" placeholder="Search">
+				        		</div>
+				        		<button type="submit" class="btn btn-default">Submit</button>
+				     		</form>
+				      		<button type="submit" class="btn btn-primary">Help</button>  
+				    	</div>
+				    </div>
+				</nav>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="pallet">
+						<div class="pallet-header">
+							<h4 class="pallet-hedding">HTML Element Pallet</h4>
+							<div class="pallet-icon">
+								<img src="desings/html.png" height="30" width="30">
+							</div>	
+						</div>
+						<div class="pallet-container" style="height:248px;">
+							<button type="submit" class="btn btn-default">div</button>
+							<button type="submit" class="btn btn-default">ul</button>
+							<button type="submit" class="btn btn-default">input</button>
+							<button type="submit" class="btn btn-default">h1</button>	
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="pallet">
+						<div class="pallet-header">
+							<h4 class="pallet-hedding">JS Validations Pallet</h4>
+							<div class="pallet-icon">
+								<img src="desings/validate.png" height="30" width="30">
+							</div>
+						</div>
+						<div class="pallet-container">
+							<button type="submit" class="btn btn-default">number</button>
+							<button type="submit" class="btn btn-default">alphanumaric</button>
+							<button type="submit" class="btn btn-default">email</button>
+							<button type="submit" class="btn btn-default">mobile</button>	
+						</div>
+					<!-- </div>
+					<div class="pallet"> -->
+						<div class="pallet-header sub-header">
+							<h4 class="pallet-hedding">Custom Validations Pallet</h4>
+						</div>
+						<div class="pallet-container">
+							<button type="submit" class="btn btn-default">number</button>
+							<button type="submit" class="btn btn-default">alphanumaric</button>
+							<button type="submit" class="btn btn-default">email</button>
+							<button type="submit" class="btn btn-default">mobile</button>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="pallet">
+						<div class="pallet-header  workplace-heading">
+							<h4 class="pallet-hedding">Drag Place</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<button type="submit" class="btn btn-primary" id="codeGen">Generate Code</button>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="pallet">
+						<div class="pallet-header workplace-heading">
+							<h4 class="pallet-hedding">Your Code</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div id="footer">
+        	<p style="float:right;margin-right:30px;">Mobigesture</p>
+        </div>
+    </body>
+</html>
+
+
+
+
